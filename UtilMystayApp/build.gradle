@@ -1,0 +1,89 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'UtilMystayApp'
+    bintrayName = 'UtilMystayApp'
+
+    publishedGroupId = 'com.lib_tv_mystay.demoreposiutil_mak'
+    libraryName = 'UtilMystayApp'
+    artifact = 'UtilMystayApp'
+
+    libraryDescription = 'A widget to load WebView as an Overlay.'
+
+    siteUrl = 'https://github.com/call5saket/utilMyStay'
+    gitUrl = 'https://github.com/call5saket/utilMyStay.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'developerId'
+    developerName = 'Developer Name'
+    developerEmail = 'call5saket@email.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "25.0.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.+'
+    testCompile 'junit:junit:4.12'
+    compile 'org.java-websocket:Java-WebSocket:1.3.0'
+    compile('com.github.nkzawa:socket.io-client:0.4.1') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'joda-time:joda-time:2.9.9'
+    compile files('libs/java-json.jar')
+    //compile 'com.github.halilozercan:BetterVideoPlayer:1.1.0'
+  //  compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'com.sothree.slidinguppanel:library:3.3.1'// slide up panel1
+    compile 'com.kyleduo.switchbutton:library:1.4.6'//switch buttonlib
+    compile 'com.h6ah4i.android.materialshadowninepatch:materialshadowninepatch:0.6.5'// to show shadow on background view..
+    compile 'com.github.kingideayou:SlideBottomPanel:1.0.6'// slide up panel2
+    compile 'com.tomergoldst.android:tooltips:1.0.6'//tooltip
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.riontech:calendar:1.0'
+    compile 'com.balysv:material-ripple:1.0.2'
+
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+
+//Add these lines to publish library to bintray
+//Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

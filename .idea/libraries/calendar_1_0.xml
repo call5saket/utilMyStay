@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="calendar-1.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/f471b7ea30bc61628ec2023a643136049fcbe122/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/f471b7ea30bc61628ec2023a643136049fcbe122/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.riontech/calendar/1.0/4687f91a70a855ef1de3f901d9ad5b3b44746529/calendar-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

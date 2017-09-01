@@ -6,7 +6,7 @@ package com.libmod_mystay.util_mystayapp_lib.utils;
 
 
 /*Constant interface for entire project.All the constant are declare here.*/
-public interface ConstatLib {
+public class ConstatLib {
 
     //Socket io url....
     //http://172.17.4.1:8014/tcp
@@ -18,6 +18,8 @@ public interface ConstatLib {
     public static  String socket_Io= "http://10.10.10.1:8014/tcp";
 
     public static  String webSocket="ws://10.10.10.1:18444/";
+
+
 
 
     //Sqlite download location for TV-CHANNELS---- url.

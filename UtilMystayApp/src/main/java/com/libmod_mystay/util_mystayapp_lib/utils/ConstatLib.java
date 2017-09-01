@@ -15,24 +15,24 @@ public interface ConstatLib {
 
     //public static final String socket_Io= "http://10.10.10.1:8014/tcp";
 
-    public static final String socket_Io= "http://10.10.10.1:8014/tcp";
+    public static  String socket_Io= "http://10.10.10.1:8014/tcp";
 
-    public static final String webSocket="ws://10.10.10.1:18444/";
+    public static  String webSocket="ws://10.10.10.1:18444/";
 
 
     //Sqlite download location for TV-CHANNELS---- url.
 
-    public static final String sqlDown="http://192.168.0.50/offlineApp/dv5/tvchannel/Tvchannel.sqlite";
+    public static  String sqlDown="http://192.168.0.50/offlineApp/dv5/tvchannel/Tvchannel.sqlite";
 
 
 
     //Sqlite download location for PROMOTIONS-
 
-    public static final String sqlDown_Promotions ="http://192.168.0.50/offlineApp/dv5/settings.sqlite";
+    public static  String sqlDown_Promotions ="http://192.168.0.50/offlineApp/dv5/settings.sqlite";
 
     //Sqlite download location for Movies-
 
-    public static final String sqlDown_mouvs="http://192.168.0.50/offlineApp/dv5/entertainment/newmymovie.sqlite";
+    public static  String sqlDown_mouvs="http://192.168.0.50/offlineApp/dv5/entertainment/newmymovie.sqlite";
 
     //here i am declearing all "DVC -- Command Here--"
 
